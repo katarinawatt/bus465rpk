@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<head>
+
+	<title>Volunteer Opportunities</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/register.css">
+	<script src = "js/apply.js"></script>
+
+</head>
+
+<body>
+
+	
+	
+	<nav class = "menu">
+		<ul>
+			<li><a href = "#home">Home</a></li>
+			<li><a class = "active" href = "registration.html">Opportunities</a></li>
+			<li><a href = "#contact">Contact Us</a></li>
+			<li><a href = "#about">About Us</a></li>
+		</ul>
+	</nav>
+
+	<div class = "opportunity">
+		<button onclick = "goBack()">Back</button>
+		
+		<h1>Current Opportunities</h1>
+		<table id = "currentOpport">
+			<tr id = "header"> <!--header-->
+				<th>ID</th>
+				<th>Organization</th>
+				<th>Position Title</th>
+				<th>Location</th>
+				<th>Application Deadline</th>
+			</tr>
+			<tr id = "o1"> <!--o1 = opportunity 1 -->
+				<td><a href = "o1.html">001</a></td>
+				<td><a href = "o1.html">Burnaby Neighbourhood House</a></td>
+				<td><a href = "o1.html">Youth Volunteer</a></td>
+				<td><a href = "o1.html">Burnaby</a></td>
+				<td><a href = "o1.html">Dec 14, 2019</a></td>
+			</tr>
+			<tr id = "02"> <!-- opportunity 2 -->
+				<td><a href = "o2.html">002</a></td>
+				<td><a href = "o2.html">Green Chair Recycling</a></td>
+				<td><a href = "o2.html">Recycling Volunteer</a></td>
+				<td><a href = "o2.html">Vancouver</a></td>
+				<td><a href = "o2.html">Nov 20, 2019</a></td>
+			</tr>
+		</table>
+	</div>
+	
+	<div class = "createPost">
+		<button class = "create">Post Volunteer Opportunities</button>
+	</div>
+	
+	
+	<div class = "pagination">
+		<a href = "#" class = "previous">&#8249;</a>
+		<a href = "#">1</a>
+		<a href = "#">2</a>
+		<a href = "#">3</a>
+		<a href = "#" class = "next">&#8250;</a>
+	</div>
+
+</body>
+
+</html>

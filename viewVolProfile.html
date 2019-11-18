@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<head>
+
+	<title>View Applicant Profiles</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/register.css">
+	<script src = "js/apply.js"></script>
+	
+</head>
+
+<body>
+
+	<nav class = "menu">
+		<ul>
+			<li><a href = "#home">Home</a></li>
+			<li><a class = "active" href = "registration.html">Opportunities</a></li>
+			<li><a href = "#contact">Contact Us</a></li>
+			<li><a href = "#about">About Us</a></li>
+		</ul>
+	</nav>
+	
+	<div class = "opportunity">
+		<button onclick = "goBack()">Back</button>
+		
+		<h1>View Applicants</h1>
+		<table id = "currentOpport">
+			<tr id = "header"> <!--header-->
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Volunteer Position</th>
+				<th>Resume</th>
+			</tr>
+			<tr id = "o1"> <!--v1 = volunteer 1 -->
+				<td><a href = "v1.html">Tony</a></td>
+				<td><a href = "v1.html">Stark</a></td>
+				<td><a href = "v1.html">Youth Volunteer</a></td>
+				<td><button class = "download">Resume</button></td>
+			</tr>
+			<tr id = "02"> <!-- opportunity 2 -->
+				<td><a href = "o2.html">Steve</a></td>
+				<td><a href = "o2.html">Rogers</a></td>
+				<td><a href = "o2.html">Recycling Volunteer</a></td>
+				<td><button class = "download">Resume</button></td>
+			</tr>
+		</table>
+	</div>
+	
+	<div class = "pagination">
+		<a href = "#" class = "previous">&#8249;</a>
+		<a href = "#">1</a>
+		<a href = "#">2</a>
+		<a href = "#">3</a>
+		<a href = "#" class = "next">&#8250;</a>
+	</div>
+	
+</body>
+
+</html>

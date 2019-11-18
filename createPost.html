@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<head>
+
+	<title>Application</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/register.css">
+	<script src = "js/apply.js"></script>
+	
+</head>
+
+<body>
+
+	<nav class = "menu">
+		<ul>
+			<li><a href = "#home">Home</a></li>
+			<li><a class = "active" href = "registration.html">Opportunities</a></li>
+			<li><a href = "#contact">Contact Us</a></li>
+			<li><a href = "#about">About Us</a></li>
+		</ul>
+	</nav>
+	
+	<div class = "volunteerInfo">
+		<button onclick = "goBack()">Back</button>
+		
+		<form action = "php/createPost.php" method = "post" class = "createPost">
+			<table id = "create">
+				<tr>
+					<td>Post Title</td>
+					<td><input type = "text" name = "postTitle" maxlength = "15" /></td>
+				</tr>
+				<tr>
+					<td>Volunteer Position</td>
+					<td><input type = "text" name = "vPosition" maxlength = "10" /></td>
+				</tr>
+				<tr>
+					<td>Location</td>
+					<td>
+						<select name = "location" >
+							<option value = "richmond">Richmond</option>
+							<option value = "vancouver">Vancouver</option>
+							<option value = "burnaby">Burnaby</option>
+							<option value = "newwest">New West</option>
+							<option value = "coquitlam">Coquitlam</option>
+							<option value = "surrey">Surrey</option>
+							<option value = "delta">Delta</option>
+							<option value = "langley">Langley</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Application Deadline</td>
+					<td><input type = "date" name = "deadline" /></td>
+				</tr>
+				<tr>
+					<td>Description</td>
+					<td><input type = "text" name = "description" maxlength = "1000" /></td>
+				</tr>
+				<tr>
+					<td colspan = "2"><input type = "submit" name = "submit" /></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+	
+</body>
+
+</html>
