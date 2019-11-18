@@ -1,0 +1,41 @@
+html, body {
+  margin:0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items:center;
+  min-height: 8vh;
+  background-color: #cac3bb;
+  font-family: 'Muli', sans-serif;
+  font-size: 10px;
+}
+
+.logo{
+  font-size: 9px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.menu{
+  display:flex;
+  justify-content:space-around;
+  width: 60%;
+}
+
+.menu li{
+  list-style:none;
+}
+
+.menu a{
+  font-size: 13px;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 3px
+
+}
