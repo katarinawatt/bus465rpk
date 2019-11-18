@@ -1,0 +1,113 @@
+.menu {
+	float: left;
+	width: 100%;
+}
+
+.menu ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #e6f3ff;
+}
+
+.menu ul li {
+	float: left;
+}
+
+.menu ul li a {
+	display: block;
+	color: black;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+.menu a:hover:not(.active) {
+	background-color: #0069cc;
+	color: white;
+}
+
+.active {
+	background-color: #4da6ff;
+}
+
+.opportunity {
+	padding: 10px;
+	margin-top: 30px;
+	margin-left: 15%;
+	margin-right: 15%;
+	float: left;
+	width: 70%;
+	clear: both;
+}
+
+
+.opportunity table, .opportunity th, .opportunity td {
+	text-align: center;
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+.opportunity th {
+	background-color: #e6f3ff;
+}
+
+.opportunity th, .opportunity td {
+	padding: 10px;
+	border: none;
+}
+
+.opportunity tr:hover {
+	background-color: #ddd;
+}
+
+.opportunity a {
+	text-decoration: none;
+}
+
+#o1, #o2 {
+	border-bottom: 2px solid #0069cc;
+}
+
+.volunteerInfo {
+	display: block;
+	padding: 10%;
+	width: 60%;
+}
+
+.apply {
+	text-align: center;
+}
+
+.apply a {
+	text-decoration: none;
+}
+
+#yourself {
+	height: 200px;
+}
+
+.create {
+	float: right;
+	width: 20%;
+	display: block;
+}
+
+.opportunity .head {
+	text-decoration: bold;
+}
+
+.pagination {
+	display: block;
+	margin-left: 35%;
+	margin-right: 15%;
+	width: 50%;
+	float: none;
+}
+
+.pagination a {
+	text-decoration: none;
+	display: inline-block;
+	padding: 8px 16px;
+}
