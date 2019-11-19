@@ -6,9 +6,24 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Browse opportunities</title>
-	<link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:300|Work+Sans:300&display=swap" rel="stylesheet"> 
 	<link rel="stylesheet" href="opstyle.css">
+	<script src = "js/apply.js"></script>
 </head>
+
+<style>
+	table {
+		border-collapse: separate;
+		background-color: rgb(240, 235, 229)
+;
+	}
+	th,td {
+		padding: 20px;
+		border-bottom: 1px soloid white;
+		text-align: left;
+		
+	}
+</style>
 
 <body>
 		<nav>
@@ -21,11 +36,36 @@
 						<li><a href="aboutpage.html">About us</a></li>
 						<li><a href="contactpage.html">Contact us</a></li>
 						<li><a href="donatepage.html">Donations</a></li>
-					</ul>
+						<li><a href="login.html">Log In</a></li>
 		</nav>
-		<p>Event 1
-			 Event 2
-		   Event 3</p>
+		
+		<div class = "opportunity">
+			<h1>BROWSE OPPORTUNITIES</h1>
+				<table id = "currentOpport">
+					<tr id = "header"> <!--header-->
+						<th>ID</th>
+						<th>Organization</th>
+						<th>Position Title</th>
+						<th>Location</th>
+						<th>Application Deadline</th>
+					</tr>
+					<tr id = "o1"> <!--o1 = opportunity 1 -->
+						<td><a href = "o1.html">001</a></td>
+						<td><a href = "o1.html">Burnaby Neighbourhood House</a></td>
+						<td><a href = "o1.html">Youth Volunteer</a></td>
+						<td><a href = "o1.html">Burnaby</a></td>
+						<td><a href = "o1.html">Dec 14, 2019</a></td>
+					</tr>
+					<tr id = "02"> <!-- opportunity 2 -->
+						<td><a href = "o2.html">002</a></td>
+						<td><a href = "o2.html">Green Chair Recycling</a></td>
+						<td><a href = "o2.html">Recycling Volunteer</a></td>
+						<td><a href = "o2.html">Vancouver</a></td>
+						<td><a href = "o2.html">Nov 20, 2019</a></td>
+					</tr>
+				</table>
+			</div>
+			
 </body>
 
 </html>

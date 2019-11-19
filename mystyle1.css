@@ -1,0 +1,24 @@
+#menu li{
+    display:inline;
+    text-align:left;
+    list-style-position:unset;
+    border:thin #ccc solid;
+    background-color: #eef;
+    border: thin #ccc solid;
+    margin-left: 0.4em;
+    border-bottom: thin #eef solid;
+}
+#menu li a{
+    text-decoration: none;
+    color:black;
+    margin-left: 0.4em; 
+    margin-right: 0.4em;
+}
+ul#menu {
+    width: 100%;
+    border-bottom: thin #ccc solid;
+}
+#menu li#current{
+    background-color: #ccc;
+    border-bottom: thin #ccc solid;
+}

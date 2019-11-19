@@ -2,20 +2,22 @@ html, body {
   margin:0px;
   padding: 0px;
   box-sizing: border-box;
+  background-color: rgb(240, 235, 229)
+
 }
 
 nav{
   display: flex;
   justify-content: space-around;
   align-items:center;
-  min-height: 8vh;
-  background-color: #cac3bb;
-  font-family: 'Muli', sans-serif;
+  min-height: 1vh;
+  background-color: rgb(95,82,74);
+  font-family: 'Raleway', sans-serif;
   font-size: 10px;
 }
 
 .logo{
-  font-size: 9px;
+  font-size: 15px;
   color: white;
   text-transform: uppercase;
   letter-spacing: 5px;
@@ -32,10 +34,34 @@ nav{
 }
 
 .menu a{
-  font-size: 13px;
+  font-size: 15px;
   color: white;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 3px
 
 }
+
+.opportunity{
+  font-size: 20px;
+  color:black;
+  font-family: 'Raleway', sans-serif; ;
+  letter-spacing: 3px;
+  width: 60%;
+  margin:auto;
+  border: 50px;
+  text-align: left;
+  
+
+}
+
+.opportunity a{
+  letter-spacing: 0px;
+}
+
+.volunteerInfo{
+  font-size: 20px;
+  color:rgb(101, 101,101);
+  font-family: 'Muli', sans-serif; 
+}
+
