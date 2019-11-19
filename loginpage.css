@@ -1,0 +1,12 @@
+html, body {
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+login{
+    font-size: 9px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
