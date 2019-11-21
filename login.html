@@ -2,11 +2,32 @@
 <html>
     <head>
         <title>Login</title>
+
+        <link rel="stylesheet" href="login.css">
     </head>
     <body>
+        <nav>
+            <div class="logo">
+                <h1>Project One Foundation</h1>
+            </div>
+            <ul class="menu">
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="oppopage.html">Browse opportunities</a></li>
+                 <li><a href="aboutpage.html">About us</a></li>
+                 <li><a href="contactpage.html">Contact us</a></li>
+                 <li><a href="donatepage.html">Donations</a></li>
+                 <li><a href="login.html">Log In</a></li>
+        </nav>
+        
         <h1>Login</h1><br>
-        Username: <input type = "text" id = "username"><br>
-       Password: <input type = "password" id = "password">
-    </body>
+        <div class = "login">
+            <form action="loginauth.php" method="post">
+                Username: <input type = "text" id = "username"><br>
+                Password: <input type = "password" id = "password"><br><br>
+                <a href = "aboutpage.html"><input type = "submit" id = "login"></a><br>
+                <a href = "registration.html">Don't have an account? Register here.</a>
+            </form>
+        </div>
+    </head>
 </html>
 

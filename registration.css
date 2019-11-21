@@ -1,9 +1,46 @@
+
 html, body {
     margin:0px;
     padding: 10px;
     box-sizing: border-box;
     background-color: #cac3bb;
 }
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    min-height: 1vh;
+    background-color: rgb(95,82,74);
+    font-family: 'Raleway', sans-serif;
+    font-size: 10px;
+}
+  
+.logo{
+    font-size: 15px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.menu{
+    display:flex;
+    justify-content:space-around;
+    width: 60%;
+}
+
+.menu li{
+    list-style:none;
+}
+
+.menu a{
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 3px
+}
+
 /* content taken from elsewhere starts here, with changes for our project*/
 input {
     width: 100%;
@@ -37,6 +74,26 @@ label{
     margin-bottom: 16px;
 }
 
+#mustMatch {
+    display: none;
+    background: white;
+    color: black;
+    position: relative;
+    padding: 10px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+}
+
+#successMatch {
+    display: none;
+    background: white;
+    color: black;
+    position: relative;
+    padding: 10px;
+    margin-top: 6px;
+    margin-bottom: 16px; 
+}
+
 #message p {
     padding: 10px 35px;
     font-size: 18px;
@@ -60,4 +117,3 @@ label{
     position: relative;
     left: -35px;
     content: "&#10006";
-} */

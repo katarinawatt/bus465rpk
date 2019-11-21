@@ -1,3 +1,4 @@
+
   var myPassword = document.getElementById("password");
   var letter = document.getElementById("letter");
   var capital = document.getElementById("capital");

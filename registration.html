@@ -1,70 +1,144 @@
+
 <!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration</title>
+        <link rel="stylesheet" href="registration.css">
+    </head>
 
-<head>
+    <body>
+        <nav>
+            <div class="logo">
+                <h1>Project One Foundation</h1>
+            </div>
+            <ul class="menu">
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="oppopage.html">Browse opportunities</a></li>
+                 <li><a href="aboutpage.html">About us</a></li>
+                 <li><a href="contactpage.html">Contact us</a></li>
+                 <li><a href="donatepage.html">Donations</a></li>
+                 <li><a href="login.html">Log In</a></li>
+        </nav>
 
-	<title>Volunteer Opportunities</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="css/register.css">
-	<script src = "js/apply.js"></script>
+        <div class = "registration">
+            <form method = "POST" action = "registrationConfirmation.php">
+                <h1>Register</h1><br><br>
 
-</head>
+                <label for="userName">Full name:</label><br>
+                <input type = "text" name = "userName" id = "userName" required><br>
 
-<body>
+                <label for="userEmailAddress">Email address:</label><br>
+                <input type = "email" name = "userEmailAddress" id = "userEmailAddress" required><br>
+                
+                <label for="userPassword">Password:</label><br>
+                <input type = "password" name = "userPassword" id = "userPassword" 
+                    pattern = "(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                    title = "Must contain minimum eight characters, one letter, one number, and one special character" 
+                    required><br>
 
-	
-	
-	<nav class = "menu">
-		<ul>
-			<li><a href = "#home">Home</a></li>
-			<li><a class = "active" href = "registration.html">Opportunities</a></li>
-			<li><a href = "#contact">Contact Us</a></li>
-			<li><a href = "#about">About Us</a></li>
-		</ul>
-	</nav>
+                <label for="userPasswordConf">Confirm your password:</label>
+                <input type = "password" name="userPasswordConf" id="userPasswordConf" required><br>
 
-	<div class = "opportunity">
-		<button onclick = "goBack()">Back</button>
-		
-		<h1>Current Opportunities</h1>
-		<table id = "currentOpport">
-			<tr id = "header"> <!--header-->
-				<th>ID</th>
-				<th>Organization</th>
-				<th>Position Title</th>
-				<th>Location</th>
-				<th>Application Deadline</th>
-			</tr>
-			<tr id = "o1"> <!--o1 = opportunity 1 -->
-				<td><a href = "o1.html">001</a></td>
-				<td><a href = "o1.html">Burnaby Neighbourhood House</a></td>
-				<td><a href = "o1.html">Youth Volunteer</a></td>
-				<td><a href = "o1.html">Burnaby</a></td>
-				<td><a href = "o1.html">Dec 14, 2019</a></td>
-			</tr>
-			<tr id = "02"> <!-- opportunity 2 -->
-				<td><a href = "o2.html">002</a></td>
-				<td><a href = "o2.html">Green Chair Recycling</a></td>
-				<td><a href = "o2.html">Recycling Volunteer</a></td>
-				<td><a href = "o2.html">Vancouver</a></td>
-				<td><a href = "o2.html">Nov 20, 2019</a></td>
-			</tr>
-		</table>
-	</div>
-	
-	<div class = "createPost">
-		<button class = "create">Post Volunteer Opportunities</button>
-	</div>
-	
-	
-	<div class = "pagination">
-		<a href = "#" class = "previous">&#8249;</a>
-		<a href = "#">1</a>
-		<a href = "#">2</a>
-		<a href = "#">3</a>
-		<a href = "#" class = "next">&#8250;</a>
-	</div>
+                <label for="userPh">Phone number:</label><br>
+                <small>Please enter in format: 123-456-7890</small>
+                <input type = "tel" name="userPh" id="userPh" 
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
 
-</body>
+                <input type = "submit" value = "Submit">
+            </form>
+        </div>
 
+        <div id = "message">
+            <h3>Password must contain the following:</h3>
+            <p id = "letter" class = "invalid">A <b>lowercase</b> letter</p>
+            <p id = "capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+            <p id = "number" class="invalid">A <b>number</b></p>
+            <p id = "length" class="invalid">Minimum <b>8 characters</b></p>
+        </div>
+
+        <div id = "mustMatch">
+          <h3>Passwords do not match</h3>
+        </div>
+
+        <div id = "successMatch">
+          <h3>Passwords match</h3>
+        </div>
+
+        <script> 
+            var myPassword = document.getElementById("password");
+            var letter = document.getElementById("letter");
+            var capital = document.getElementById("capital");
+            var number = document.getElementById("number");
+            var length = document.getElementById("length"); 
+          
+            //When user clicks on password field, show message box
+            document.getElementById("userPassword").onfocus = function() {
+              document.getElementById("message").style.display = "block";
+            }
+          
+            //When user clicks outside of password field
+            userPassword.onblur = function() {
+              document.getElementById("message").style.display = "none";
+            }
+          
+            document.getElementById("userPasswordConf").onfocus = function() {
+              document.getElementById("mustMatch").style.display = "block";
+            }
+            userPasswordConf.onblur = function() {
+              document.getElementById("mustMatch").style.display = "none";
+              document.getElementById("successMatch").style.display = "none";
+            }
+            userPasswordConf.onkeyup = function() {
+              if(userPassword.value == userPasswordConf.value) {
+                document.getElementById("mustMatch").style.display = "none";
+                document.getElementById("successMatch").style.display = "block";
+              }
+            }
+
+            //When the user starts to type something in password field
+            userPassword.onkeyup = function() {
+              //validate lowercase letters
+              var lowercase = /[a-z]/g;
+              if(userPassword.value.match(lowercase)) {
+                letter.classList.remove("invalid");
+                letter.classList.add("valid");
+              }
+              else {
+                letter.classList.remove("valid");
+                letter.classList.add("invalid");
+              }
+              //validate uppercase letters
+              var uppercase = /[A-Z]/g;
+              if(userPassword.value.match(uppercase)) {
+                capital.classList.remove("invalid");
+                capital.classList.add("valid");
+              } 
+              else {
+                capital.classList.remove("valid");
+                capital.classList.add("invalid");
+              }
+              //validate numbers
+              var numbers = /[0-9]/g;
+              if(userPassword.value.match(numbers)) {
+                number.classList.remove("invalid");
+                number.classList.add("valid");
+              } 
+              else {
+                number.classList.remove("valid");
+                number.classList.add("invalid");
+              }
+              //validate length
+              if(userPassword.value.length >= 8) {
+                length.classList.remove("invalid");
+                length.classList.add("valid");
+              }
+              else {
+                length.classList.remove("valid");
+                length.classList.add("invalid");
+              }
+            }
+            
+          </script>
+    </body>
 </html>
+
