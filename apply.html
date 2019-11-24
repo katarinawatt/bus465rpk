@@ -1,36 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
-<html>
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Application</title>
-	<link href="https://fonts.googleapis.com/css?family=Raleway:300|Work+Sans:300&display=swap" rel="stylesheet"> 
-	<link rel="stylesheet" href="opstyle.css">
-	<script src = "js/apply.js"></script>
-</head>
 
+<head>
+
+	<title>Application</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/volunteer.css">
+	<script src = "js/apply.js"></script>
+	
+</head>
 
 <body>
 
-	<nav>
-		<div class="logo">
-			<h1>Project One Foundation</h1>
-		</div>
-		<ul class="menu">
-			<li><a href="homepage.html">Home</a></li>
-			<li><a href="oppopage.html">Browse opportunities</a></li>
-			<li><a href="aboutpage.html">About us</a></li>
-			<li><a href="contactpage.html">Contact us</a></li>
-			<li><a href="donatepage.html">Donations</a></li>
+	<nav class = "menu">
+		<ul>
+			<li><a href = "#home">Home</a></li>
+			<li><a class = "active" href = "volunteer.html">Opportunities</a></li>
+			<li><a href = "#contact">Contact Us</a></li>
+			<li><a href = "#about">About Us</a></li>
 		</ul>
 	</nav>
 
 	<div class = "volunteerInfo">
-		<button onclick = "o1.html">Back</button>
+		<button onclick = "goBack()">Back</button>
 	
-		<form action = "php/apply.php" method = "post" enctype = "multipart/form-data">
+		<form action = "php/postInfo.php" method = "post" enctype = "multipart/form-data">
 			<table>
 				<tr>
 					<td>First Name </td>
@@ -49,7 +43,7 @@
 					<td><input type = "file" name = "resume" id = "resume" /></td>
 				</tr>
 				<tr>
-					<td><input type = "submit" value = "Submit" /></td>
+					<td><input type = "submit" value = "Submit" name = "upload" /></td>
 				</tr>
 			</table>
 		</form>
