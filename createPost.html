@@ -5,8 +5,41 @@
 	<title>Application</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="css/register.css">
+	<link rel="stylesheet" href="css/volunteer.css">
 	<script src = "js/apply.js"></script>
+		<script type = "text/javascript">
+		function validateForm() {
+		
+			var org = document.forms["create"]["org"].value;
+			var position = document.forms["create"]["position"].value;
+			var location = document.forms["create"]["location"].value;
+			var deadline = document.forms["create"]["deadline"].value;
+			var description = document.forms["create"]["description"].value;
+			var application = [org, position, location, deadline, description];
+			var i;
+			
+			if (org == "") {
+				alert("Please fill out your organization name!");
+				return false;
+			}else if (position == "") {
+				alert("Please fill out the position you are recruiting!");
+				return false;
+			}else if (location == "default") {
+				alert("Please select a location!");
+				return false;
+			}
+			else if (description == "") {
+				alert("Please write something about yourself!");
+				return false;
+			}else if (deadline == "") {
+				alert("Please select a date!");
+				return false;
+			}else {
+				return true;
+			}
+		
+		}
+	</script>
 	
 </head>
 
@@ -15,7 +48,7 @@
 	<nav class = "menu">
 		<ul>
 			<li><a href = "#home">Home</a></li>
-			<li><a class = "active" href = "registration.html">Opportunities</a></li>
+			<li><a class = "active" href = "php/opportunity.php">Opportunities</a></li>
 			<li><a href = "#contact">Contact Us</a></li>
 			<li><a href = "#about">About Us</a></li>
 		</ul>
@@ -24,20 +57,21 @@
 	<div class = "volunteerInfo">
 		<button onclick = "goBack()">Back</button>
 		
-		<form action = "php/createPost.php" method = "post" class = "createPost">
+		<form action = "php/posterView.php" method = "post" name = "create" class = "createPost" onsubmit = "return validateForm()">
 			<table id = "create">
 				<tr>
-					<td>Post Title</td>
-					<td><input type = "text" name = "postTitle" maxlength = "15" /></td>
+					<td>Organization</td>
+					<td><input type = "text" name = "org" maxlength = "15" /></td>
 				</tr>
 				<tr>
 					<td>Volunteer Position</td>
-					<td><input type = "text" name = "vPosition" maxlength = "10" /></td>
+					<td><input type = "text" name = "position" maxlength = "10" /></td>
 				</tr>
 				<tr>
 					<td>Location</td>
 					<td>
 						<select name = "location" >
+							<option value = "default">Select Location</option>
 							<option value = "richmond">Richmond</option>
 							<option value = "vancouver">Vancouver</option>
 							<option value = "burnaby">Burnaby</option>
@@ -55,7 +89,7 @@
 				</tr>
 				<tr>
 					<td>Description</td>
-					<td><input type = "text" name = "description" maxlength = "1000" /></td>
+					<td><textarea id = "description" name = "description" placeholder = "Maximum Length: 500 words" maxlength: "500"></textarea></td></td>
 				</tr>
 				<tr>
 					<td colspan = "2"><input type = "submit" name = "submit" /></td>

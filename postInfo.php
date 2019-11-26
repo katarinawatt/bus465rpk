@@ -3,6 +3,7 @@
 <head>
 	<title>Volunteer Opportunity</title>
 	<link rel = "stylesheet" type = "text/css" href = "../css/volunteer.css">
+	<script src = "../js/apply.js"></script>
 </head>
 
 <body>
@@ -72,30 +73,7 @@
 
 			mysqli_close($db);
 		?>
-		
-		<!--<form action = "postInfo.php" method = "post" enctype = "multipart/form-data">
-			<table>
-				<tr>
-					<td>First Name </td>
-					<td><input type = "text" name = "fname" maxlength = "10" id = "fname" /></td>
-				</tr>
-				<tr>
-					<td>Last Name </td>
-					<td><input type = "text" name = "lname" maxlength = "10" id = "lname" /></td>
-				</tr>
-				<tr>
-					<td>Tell Us About Yourself</td>
-					<td><textarea id = "yourself" name = "yourself" placeholder = "I am...(Maximum Length: 500 words)" maxlength: "500"></textarea></td>
-				</tr>
-				<tr>
-					<td>Upload Resume</td>
-					<td><input type = "file" name = "uploadResume" id = "resume" /></td>
-				</tr>
-				<tr>
-					<td><input type = "submit" value = "Submit" name = "submitInfo" /></td>
-				</tr>
-			</table>
-		</form>-->
+	
 	</div>
 	
 </body>

@@ -7,7 +7,34 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/volunteer.css">
 	<script src = "js/apply.js"></script>
-	
+	<script type = "text/javascript">
+		function validateForm() {
+		
+			var fname = document.forms["apply"]["fname"].value;
+			var lname = document.forms["apply"]["lname"].value;
+			var description = document.forms["apply"]["yourself"].value;
+			var resume = document.getElementById("resume").value;
+			var application = [fname, lname, description, resume];
+			var i;
+			
+			if (fname == "") {
+				alert("Please fill out your first name!");
+				return false;
+			}else if (lname == "") {
+				alert("Please fill out your last name!");
+				return false;
+			}else if (description == "") {
+				alert("Please write something about yourself!");
+				return false;
+			}else if (resume == 0) {
+				alert("Please upload your resume!");
+				return false;
+			}else {
+				return true;
+			}
+		
+		}
+	</script>
 </head>
 
 <body>
@@ -15,7 +42,7 @@
 	<nav class = "menu">
 		<ul>
 			<li><a href = "#home">Home</a></li>
-			<li><a class = "active" href = "volunteer.html">Opportunities</a></li>
+			<li><a class = "active" href = "php/opportunity.php">Opportunities</a></li>
 			<li><a href = "#contact">Contact Us</a></li>
 			<li><a href = "#about">About Us</a></li>
 		</ul>
@@ -24,7 +51,7 @@
 	<div class = "volunteerInfo">
 		<button onclick = "goBack()">Back</button>
 	
-		<form action = "php/postInfo.php" method = "post" enctype = "multipart/form-data">
+		<form action = "php/postInfo.php" method = "post" enctype = "multipart/form-data" name = "apply" onsubmit = "return validateForm()">
 			<table>
 				<tr>
 					<td>First Name </td>
