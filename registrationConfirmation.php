@@ -1,10 +1,10 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>Registration Confirmed</title>
         <link rel="stylesheet" href="registration.css">
     </head>
     <body>
-        <?php //echo $_POST["userName"]; ?>. 
         <?php
                 $db = mysqli_connect("localhost", "kaw19", "1234", "bus465_project");
                 if (!$db) { 
@@ -18,7 +18,6 @@
                     
                     $sql = "INSERT INTO `registration`(`userName`, `userEmailAddress`, `userPassword`, `userPh`)
                             VALUES ('$userName', '$userEmailAddress', '$userPassword', '$userPh')";
-
                     if(mysqli_query($db, $sql)) {                        
                         echo "Successfully registered.  Thank you, " . $userName . ".";
                     }
@@ -31,6 +30,6 @@
                 }
                 mysqli_close($db);
             ?>
-
+            <br><a href = "homepage.html">Return to home page</a>
     </body>
 </html>

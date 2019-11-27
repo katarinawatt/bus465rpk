@@ -29,12 +29,33 @@
                         if (!$db) { 
                             die("Connection failed: " . mysqli_connect_error()); 
                         }
+                        $sql = "SELECT userName FROM registration";
+                        if($result = mysqli_query($db,$sql)) {
+                            while ($row = mysqli_fetch_row($result)) {
+                                printf("%s",$row[0]);
+                            }
+                        }
+                        mysqli_close($db);
                         ?>
                 </td>
             </tr>
             <tr>
                 <th>Phone Number</th>
-                <td># taken from SQL database</td>
+                <td>
+                    <?php 
+                        $db = mysqli_connect("localhost", "kaw19", "1234", "bus465_project");
+                        if (!$db) { 
+                            die("Connection failed: " . mysqli_connect_error()); 
+                        }
+                        $sql = "SELECT userPh FROM registration";
+                        if($result = mysqli_query($db,$sql)) {
+                            while ($row = mysqli_fetch_row($result)) {
+                                printf("%s",$row[0]);
+                            }
+                        }
+                        mysqli_close($db);
+                        ?>
+                </td>
             </tr>
             <tr>
                 <th>Email address</th>
