@@ -1,11 +1,13 @@
 <html>
 
 <head>
-
-	<title>Volunteer Opportunity</title>
-
-	<link rel = "stylesheet" type = "text/css" href = "../css/opportunity.css">
-	<link rel = "stylesheet" type = "text/css" href = "../css/volunteer.css">
+<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Application</title>
+	<link href="https://fonts.googleapis.com/css?family=Raleway:300&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="volunteer.css">
+	<link rel="stylesheet" href="oppostyle.css">
 	<!--<link rel = "stylesheet" type = "text/css" href = "../css/jquery.dataTables.min.css">
 	<script src = "jquery.dataTables.min.js">-->
 	<script type = "text/javascript">
@@ -21,17 +23,22 @@
 
 <body>
 
-	<nav class = "menu">
-		<ul>
-			<li><a href = "#home">Home</a></li>
-			<li><a class = "active" href = "opportunity.php">Opportunities</a></li>
-			<li><a href = "#contact">Contact Us</a></li>
-			<li><a href = "#about">About Us</a></li>
-		</ul>
-	</nav>
+<nav>
+					<div class="logo">
+						<h1>Project One Foundation</h1>
+					</div>
+					<ul class="menu">
+						<li><a href="homepage.html">Home</a></li>
+						<li><a href="oppopage.html">Browse opportunities</a></li>
+						<li><a href="aboutpage.html">About us</a></li>
+						<li><a href="contactpage.html">Contact us</a></li>
+						<li><a href="donatepage.html">Donations</a></li>
+						<li><a href="login.html">Log In</a></li>
+					</ul>
+		</nav>
 
 	<div class = "entire">
-		<button onclick = "goBack()">Back</button>
+		<button onclick = "history.go(-1)">Back</button>
 	
 		<?php
 			
@@ -45,7 +52,7 @@
 				$idNum = 0;
 				
 				
-			echo "<table width=100%>
+			echo "<table class = 'resultTable'>
 			<tr>
 			<th>Post ID</th>
 			<th>Organization</th>

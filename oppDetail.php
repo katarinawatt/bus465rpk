@@ -1,28 +1,36 @@
 <!DOCTYPE html>
+<htm>
 
 <head>
-
-	<title>Opportunity</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="css/volunteer.css">
-	<link rel="stylesheet" href="css/opportunity.css">
+<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Application</title>
+	<link href="https://fonts.googleapis.com/css?family=Raleway:300&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="volunteer.css">
 	<script src = "js/apply.js"></script>
+
+
 </head>
 
 <body>
 
-	<nav class = "menu">
-		<ul>
-			<li><a href = "#home">Home</a></li>
-			<li><a class = "active" href = "volunteer.html">Opportunities</a></li>
-			<li><a href = "#contact">Contact Us</a></li>
-			<li><a href = "#about">About Us</a></li>
-		</ul>
-	</nav>
+<nav>
+					<div class="logo">
+						<h1>Project One Foundation</h1>
+					</div>
+					<ul class="menu">
+						<li><a href="homepage.html">Home</a></li>
+						<li><a href="oppopage.html">Browse opportunities</a></li>
+						<li><a href="aboutpage.html">About us</a></li>
+						<li><a href="contactpage.html">Contact us</a></li>
+						<li><a href="donatepage.html">Donations</a></li>
+						<li><a href="login.html">Log In</a></li>
+					</ul>
+		</nav>
 	
 	<div class = "volunteerInfo">
-		<button onclick = "goBack()">Back</button>
+		<button onclick = "history.go(-1)">Back</button>
 		
 		<?php
 		

@@ -2,26 +2,32 @@
 <htm>
 
 <head>
-
+<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Application</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="css/volunteer.css">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:300&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="volunteer.css">
 	<script src = "js/apply.js"></script>
+
 
 </head>
 
 <body>
 
-	<nav class = "menu">
-		<ul>
-			<li><a href = "#home">Home</a></li>
-			<li><a class = "active" href = "php/opportunity.php">Opportunities</a></li>
-			<li><a href = "#contact">Contact Us</a></li>
-			<li><a href = "#about">About Us</a></li>
-		</ul>
-	</nav>
-	
+<nav>
+					<div class="logo">
+						<h1>Project One Foundation</h1>
+					</div>
+					<ul class="menu">
+						<li><a href="homepage.html">Home</a></li>
+						<li><a href="oppopage.html">Browse opportunities</a></li>
+						<li><a href="aboutpage.html">About us</a></li>
+						<li><a href="contactpage.html">Contact us</a></li>
+						<li><a href="donatepage.html">Donations</a></li>
+						<li><a href="login.html">Log In</a></li>
+					</ul>
+		</nav>
 	<?php
 		
 		$db = mysqli_connect("localhost", "rza39", "1234", "bus465_project");
@@ -31,7 +37,7 @@
 		$result = mysqli_query($db, $sql);
 		
 		
-		echo "<table width=100%>
+		echo "<table class = 'iniTable'>
 		<tr>
 		<th>Application ID</th>
 		<th>First Name</th>
