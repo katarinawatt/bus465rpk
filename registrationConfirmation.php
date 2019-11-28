@@ -16,6 +16,13 @@
                     $userPassword = $_POST["userPassword"];
                     $userPh = $_POST["userPh"];
                     $VolorNot = $_POST["VolorNot"];
+                    if($VolorNot == "Director") {
+                        $VolorNot = "notVol";
+                    }
+                    else {
+                        $VolorNot = "isVol";
+                    }
+
                     
                     $sql = "INSERT INTO `registration`(`userName`, `userEmailAddress`, `userPassword`, `userPh`, `VolorNot`)
                             VALUES ('$userName', '$userEmailAddress', '$userPassword', '$userPh', '$VolorNot')";
