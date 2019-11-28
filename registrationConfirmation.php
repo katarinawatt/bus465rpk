@@ -15,7 +15,7 @@
                     $userEmailAddress = $_POST["userEmailAddress"];
                     $userPassword = $_POST["userPassword"];
                     $userPh = $_POST["userPh"];
-                    $isVol = $_POST["isVol"];
+                    $VolorNot = $_POST["VolorNot"];
                     
                     $sql = "INSERT INTO `registration`(`userName`, `userEmailAddress`, `userPassword`, `userPh`, `VolorNot`)
                             VALUES ('$userName', '$userEmailAddress', '$userPassword', '$userPh', '$VolorNot')";
