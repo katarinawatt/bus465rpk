@@ -15,9 +15,10 @@
                     $userEmailAddress = $_POST["userEmailAddress"];
                     $userPassword = $_POST["userPassword"];
                     $userPh = $_POST["userPh"];
+                    $isVol = $_POST["isVol"];
                     
-                    $sql = "INSERT INTO `registration`(`userName`, `userEmailAddress`, `userPassword`, `userPh`)
-                            VALUES ('$userName', '$userEmailAddress', '$userPassword', '$userPh')";
+                    $sql = "INSERT INTO `registration`(`userName`, `userEmailAddress`, `userPassword`, `userPh`, `VolorNot`)
+                            VALUES ('$userName', '$userEmailAddress', '$userPassword', '$userPh', '$VolorNot')";
                     if(mysqli_query($db, $sql)) {                        
                         echo "Successfully registered.  Thank you, " . $userName . ".";
                     }
@@ -29,7 +30,11 @@
                     exit;
                 }
                 mysqli_close($db);
-            ?>
+        ?>
             <br><a href = "homepage.html">Return to home page</a>
+         <?php
+            $userEmailAddress = $_GET['userEmailAddress'];
+            echo "<h3><a href = 'opportunity.php?=userEmailAddress=" . $userEmailAddress . "'>Browse opportunity page</a></h3>";    
+        ?>
     </body>
 </html>
